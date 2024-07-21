@@ -53,12 +53,11 @@
           document.querySelector(".error").style.display = "block";
           document.querySelector(".weather").style.display = "none";
         }else{
-          //variable data contains all weather information from apiUrl
-          var data = await response.json(); //object that contains method for parsing values and convert values to JSON
+          
+          var data = await response.json(); 
 
-          //queryselector returns first element within document that matches specified selector, if no matches are found null is returned
-          //innerHTML = gets/sets HTML markup contained within the element
-          //in this case it will search for the class city, select the h2 element and replace the city name
+          
+        
           document.querySelector(".city").innerHTML = data.name;
           document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
           document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
